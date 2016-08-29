@@ -1,13 +1,8 @@
-function waitThreeSeconds() {
-    var ms =3000 + new Date().getTime();
-    while(ms> new Date()){};
-    console.log('Finished Function');
-}
-document.addEventListener('click', clickHandler);
+function setDefaultValue (name ) {
 
-function clickHandler () {
-    console.log("Clicked");
+	name = name || "Nick Name: Sid";
+	console.log(name);
 }
 
-waitThreeSeconds();
-console.log("Execution finished & Starting Checking click event");
+setDefaultValue();
+setDefaultValue("Real name : Sudhanshu")
