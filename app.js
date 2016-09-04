@@ -32,11 +32,19 @@ function OtherSimple () {
 var JS = {
     name: 'The JavaScript Object',
     log: function () {
-        console.log(this.name);
+        this.name="updated name";
+        console.log(this);
+        var setname = function(newname) {
+            this.name=newname;
+            console.log(this);
+        };
+        setname("update again!!");
+        console.log(this);
     }
 }
 
 JS.log();
+
 OtherSimple.othersomething = {
     name: 'Function in Function',
     log: function () {
