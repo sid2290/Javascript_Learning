@@ -59,3 +59,14 @@ greet({
     flyObjectfirstName: 'Sid',
     flyObjectlastName:'Narang'
 });
+
+//Faking NameSpace
+var nameSpaceGreet ='Hello!';
+var nameSpaceSGreet ='Hola!';
+
+var english = {};
+var french = {};
+english.nameSpaceGreet = 'Hello!';
+french.nameSpaceGreet = 'Salute!';
+console.log(english.nameSpaceGreet);
+console.log(french.nameSpaceGreet);
