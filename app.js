@@ -1,22 +1,48 @@
+// Using this keyword 
+//Trying to use "this" keyword in the context of simple function
+
 Simple();
 
 function Simple() {
-    console.log("Simple function");
+    console.log(this);
+    this.something="Hello";
+    console.log(something);
 }
 
 
 var anonymousFunction = function(){
-    console.log("Anonymous Function");
+    console.log(this);
 }
 
 anonymousFunction();
 
-function ArgumentTaking(a) {
-    console.log(a);
+
+//Showing that something variable is undefined for the context of Simple function
+console.log(Simple.something);
+
+//but, "this" keyword is pointing to the global window object
+console.log(window.something);
+
+
+function OtherSimple () {
+    console.this(this);
+    
+   }; 
+
+var JS = {
+    name: 'The JavaScript Object',
+    log: function () {
+        console.log(this.name);
+    }
 }
 
-//passing object as argument
-ArgumentTaking({greeting: "hello"});
+JS.log();
+OtherSimple.othersomething = {
+    name: 'Function in Function',
+    log: function () {
+        console.log(this);
+    }
+}
 
-//passing function as argument
-ArgumentTaking(function() {console.log("Argument function code")});
+OtherSimple.othersomething.log();
+
