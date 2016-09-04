@@ -70,3 +70,12 @@ english.nameSpaceGreet = 'Hello!';
 french.nameSpaceGreet = 'Salute!';
 console.log(english.nameSpaceGreet);
 console.log(french.nameSpaceGreet);
+
+//Coverting JSON to JS object and JS object to JSON
+var objectLiteral = {
+    firstname: 'Mary',
+    isAProgrammer: true
+}
+
+console.log(JSON.parse('{"firstname":"Mary","isAProgrammer":true}'));
+console.log(JSON.stringify(objectLiteral));
