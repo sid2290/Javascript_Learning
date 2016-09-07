@@ -1,15 +1,29 @@
-//How argument keyword is use
+//creating a function
+function greet() {
+    console.log("Hello");
+} ;
 
-function car(name,brand,color) {
-    console.log(arguments);
-    console.log(name);
-    console.log(brand);
-    console.log(color);
-    console.log("-----------------------------");    
-}
+//Calling a function
+greet();
 
-car();
-car("Altima");
-car("Altima","Nissan");
-car("Altima","Nissan","White");
+//creating a function and assigning it to variable
+var greeting = function () {
+    console.log("Hello again!!");
+};
 
+//Variable becomes function and we can invoke it
+greeting();
+
+//Now Using IIFE to assign variable a string value rather that function
+
+var iifeGreeting = function() {
+    return "hello";
+}();
+
+//writing value of variable on console
+console.log(iifeGreeting);
+
+// using IIFE stand alone
+(function(name) {
+    console.log("hello "+ name);
+}("Sid"));
