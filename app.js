@@ -22,8 +22,11 @@ var iifeGreeting = function() {
 
 //writing value of variable on console
 console.log(iifeGreeting);
-
+var name="Safe outside";
 // using IIFE stand alone
-(function(name) {
+(function() {
+    var name="safe inside";
     console.log("hello "+ name);
-}("Sid"));
+}());
+
+console.log(name);
