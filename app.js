@@ -1,32 +1,11 @@
 //creating a function
-function Closure() {
-    var arr =[];
-    for (var i =0 ; i<3; i++){
-    arr.push(function () {    
-            console.log(i);
-    });
-    };
-    return arr;
+function Add(callback) {
+  var a = 10;
+    var b= 20;
+    var c= a+b;
+    console.log(c);
+    callback();
 } ;
 
-//Calling a function
-var outer = Closure();
-outer[0]();
-outer[1]();
+Add(function () {console.log("Adding is finished")});
 
-function Closure2() {
-    var arr =[];
-    for (var i =0 ; i<3; i++){
-    arr.push((function (j) {
-        return function() {
-    console.log(j);
-        }
-    }(i)));
-    };
-    return arr;
-} ;
-
-//Calling a function
-var outer2 = Closure2();
-outer2[0]();
-outer2[1]();
