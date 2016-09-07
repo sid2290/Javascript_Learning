@@ -7,5 +7,5 @@ function Add(callback) {
     callback();
 } ;
 
-Add(function () {console.log("Adding is finished")});
+Add(function () {console.log("Adding is finished finally")});
 
