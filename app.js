@@ -20,3 +20,16 @@ var array_3 = PassFirstClassFunctions(array_1,function (x) {
 })
 console.log(array_2 );
 console.log(array_3 );
+
+var checkLimit = function (x,limit) {
+    return x < limit;
+}
+
+var array_4 = PassFirstClassFunctions(array_1,checkLimit.bind(this,1));
+console.log(array_4 );
+
+//using underscore library
+var array_5 = _.map(array_1,function(x) {return x*3});
+
+console.log(array_5);
+
