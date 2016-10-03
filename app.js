@@ -10,8 +10,20 @@ var john = {
     firstname : 'John',
     lastname: 'desuza'
 }
-// Use of __proto__
+// Use of __proto__ for inheritance (inheriting john object from person)
 
 john.__proto__ = person;
 
+// Calling property by inheritance 
+
 console.log(john.getFullName());
+
+var jane = {
+  firstname : 'Jane'  
+};
+
+// inheriting jane object from person
+
+jane.__proto__ = person;
+
+console.log(jane.firstname + " " + jane.lastname);
