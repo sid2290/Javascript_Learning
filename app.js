@@ -1,12 +1,26 @@
-//Pure prototypal inheritance
+// initialization of arrays and objects
 
-var person = {
-    firstname : 'Default',
-    lastname: 'Default',
-    greet: function() {
-        return 'Hi' + ' ' + this.firstname;
+var people = [ 
+    {
+        firstname:'John',
+        lastname:'Doe',
+        addresses: [
+            '111 Main St.',
+            '222 Third St.'
+        ]
+    },
+    
+    {
+        firstname:'Jane',
+        lastname:'Doe',
+        addresses: [
+            '333 Main St.',
+            '444 Fifth St.'
+        ],
+        greet: function() {
+            return 'Hello!';
+        }
     }
-}
+]
 
-var john = Object.create(person);
-console.log(john);
+console.log(people);
