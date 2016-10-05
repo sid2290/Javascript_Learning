@@ -1,26 +1,7 @@
-// initialization of arrays and objects
+"use strict";
 
-var people = [ 
-    {
-        firstname:'John',
-        lastname:'Doe',
-        addresses: [
-            '111 Main St.',
-            '222 Third St.'
-        ]
-    },
-    
-    {
-        firstname:'Jane',
-        lastname:'Doe',
-        addresses: [
-            '333 Main St.',
-            '444 Fifth St.'
-        ],
-        greet: function() {
-            return 'Hello!';
-        }
-    }
-]
+var person;
+person = {};
+console.log(person);
 
-console.log(people);
+
