@@ -10,12 +10,16 @@ function Person(firstname, lastname) {
    // return { greeting: 'I got in the way'};
 }
 
+//creating prototype for a function
+Person.prototype.nationality = "English";
+Person.prototype.getFullName = function() {
+    return this.firstname + ' ' + this.lastname;
+}
+
 // creating objects in javascript
-var john = new Person("Sid","Narang");
+var john = new Person('Sid','Narang');
+console.log(john.getFullName());
 
-console.log(john);
-
-//creating other object
+//creating another object
 var jane = new Person('Sudhanshu','Narang');
-
-console.log(jane);
+console.log(jane.nationality);
