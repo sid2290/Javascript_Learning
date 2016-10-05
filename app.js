@@ -1,26 +1,15 @@
-// create objects in javascript
-
-function Person(firstname, lastname) {
-    
-    console.log(this);
-    this.firstname = firstname;
-    this.lastname = lastname;
-    console.log('This function is invoked');
-    
-   // return { greeting: 'I got in the way'};
+// using prototype to create method on built in stuff
+String.prototype.isLengthGreaterThan = function(limit) {
+    return this.length > limit;
 }
 
-//creating prototype for a function
-Person.prototype.nationality = "English";
-Person.prototype.getFullName = function() {
-    return this.firstname + ' ' + this.lastname;
+//converting string automatically to object
+console.log("John".isLengthGreaterThan(3));
+
+//converting number to object is not possible automatically
+Number.prototype.isPositive = function() {
+    return this > 0;
 }
 
-//Dangerous aside of new operator
-// creating objects in javascript
-var john = Person('Sid','Narang');
-console.log(john);
-
-//creating another object
-var jane = Person('Sudhanshu','Narang');
-console.log(jane);
+var a = new Number(3);
+console.log(a.isPositive());
