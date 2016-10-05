@@ -16,10 +16,11 @@ Person.prototype.getFullName = function() {
     return this.firstname + ' ' + this.lastname;
 }
 
+//Dangerous aside of new operator
 // creating objects in javascript
-var john = new Person('Sid','Narang');
-console.log(john.getFullName());
+var john = Person('Sid','Narang');
+console.log(john);
 
 //creating another object
-var jane = new Person('Sudhanshu','Narang');
-console.log(jane.nationality);
+var jane = Person('Sudhanshu','Narang');
+console.log(jane);
